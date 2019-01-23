@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blueprint 2019 Web Speed Test</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700|ZCOOL+KuaiLe" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+    <script src="src/firebase-init.js"></script>
+    <script src="src/main.js"></script>
+</head>
+<body>
+<div id="body">
+    <div id="game-wrapper">
+        <div id="game">
+            <!-- game title -->
+            <h1>Blueprint Speed Test Game</h1>
+            <!-- display messages -->
+            <!-- 
+                we display messages to the user so that they know what 
+                to do as they are playing the game.
+            -->
+            <div id="stg-message-box">
+                <span id="stg-message">
+                    Hello there! Welcome to BluePrint Speed Test Game.
+                    Press the Start Game button to start!
+                </span>
+            </div>
+            <!-- timer -->
+            <div id="stg-timer">__</div>
+            <!-- game boxes -->
+            <!--
+                when playing, one box lights up randomly. that box must
+                then be selected for points.
+            -->
+            <div id="stg-game-boxes">
+                <div id="stg-game-box-1" class="stg-game-box">
+                    <span></span>
+                </div>
+                <div id="stg-game-box-2" class="stg-game-box">
+                    <span></span>
+                </div>
+                <div id="stg-game-box-3" class="stg-game-box">
+                    <span></span>
+                </div>
+                <div id="stg-game-box-4" class="stg-game-box">
+                    <span></span>
+                </div>
+                <div id="stg-game-box-5" class="stg-game-box">
+                    <span></span>
+                </div>
+                <div id="stg-game-box-6" class="stg-game-box">
+                    <span></span>
+                </div>
+                <div id="stg-game-box-7" class="stg-game-box">
+                    <span></span>
+                </div>
+                <div id="stg-game-box-8" class="stg-game-box">
+                    <span></span>
+                </div>
+                <div id="stg-game-box-9" class="stg-game-box">
+                    <span></span>
+                </div>
+                <div id="stg-game-box-10" class="stg-game-box">
+                    <span></span>
+                </div>
+            </div>
+            <!-- status bar -->
+            <!-- status about points and rounds -->
+            <div id="stg-status">
+                <div id="stg-status-points-box">
+                    <span class="stg-status-label">Points</span>
+                    <span id="stg-status-points-val">0</span>
+                </div>
+                <div id="stg-status-round-box">
+                    <span class="stg-status-label">Round</span>
+                    <span id="stg-status-round-val">0</span>
+                </div>
+            </div>
+            <!-- action bar -->
+            <!-- 
+                this contains the action button, which changes based on 
+                where the person is. 
+            -->
+            <div id="stg-actions">
+                <input type="button" id="stg-action-button" value="Start Game">
+            </div>
+
+            <!-- username input -->
+            <!-- 
+                this appears whenever a user is done playing a the game
+                and is ready to save their score. otherwise, it remains 
+                hidden throughout. 
+            -->
+            <div id="stg-username">
+                <label for="stg-username-input">Username:</label>
+                <input type="text" id="stg-username-input">
+                <input type="submit" id="stg-submit" value="Save your Score">
+            </div>
+        </div>
+    </div>
+    <div id="leaderboard">
+        <h1>Leaderboard</h1>
+        <div id="lb-people"></div>
+    </div>
+</div>
+</body>
+</html>

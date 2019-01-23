@@ -1,0 +1,230 @@
+root {
+    --screen-xxs: 390px;
+    --screen-xs: 576px;
+    --screen-sm: 768px;
+    --screen-md: 992px;
+    --screen-lg: 1200px;
+    --screen-xlg: 1448px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+
+body {
+    margin: 0;
+}
+
+#body {
+    display: block;
+}
+
+#game-wrapper {
+    position: relative;
+    background-color: aquamarine;
+    padding-bottom: 4rem;
+}
+
+#game-wrapper #game {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#game-wrapper #game #stg-message-box {
+    padding: 2rem 1rem;
+    font-size: 1.5rem;
+}
+
+#game-wrapper #game #stg-timer {
+    font-size: 1.5rem;
+}
+
+#game-wrapper #game #stg-game-boxes {
+    text-align: center;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+#game-wrapper #game #stg-game-boxes .stg-game-box {
+    display: inline-block;
+    width: 9%;
+    min-height: 50px;
+    padding: 5px;
+}
+
+#game-wrapper #game #stg-game-boxes .stg-game-box span {
+    background-color: #BFE;
+    display: inline-block;
+    min-height: 50px;
+    width: 100%;
+}
+
+#game-wrapper #game #stg-status {
+    font-size: 1.5rem;
+}
+
+#game-wrapper #game #stg-actions {
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+#game-wrapper #game #stg-actions #stg-action-button {
+    border: none;
+    font-size: 1.5rem;
+}
+
+#game-wrapper #game #stg-actions #stg-action-button:hover {
+    background-color: cadetblue;
+}
+
+#game-wrapper #game #stg-actions #stg-action-button:active, #game-wrapper #game #stg-actions #stg-action-button:focus {
+    background-color: rebeccapurple;
+}
+
+#game-wrapper #game #stg-username {
+    display: none;
+    font-size: 1.5rem;
+}
+
+#leaderboard {
+    position: relative;
+    background-color: lime;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+#leaderboard * {
+    text-align: center;
+}
+
+#leaderboard #lb-people {
+    font-size: 1.15rem;
+}
+
+#leaderboard #lb-people .lb-ranked-player {
+    padding: 0.25rem 0;
+}
+
+#leaderboard #lb-people .lb-rp-ranking, #leaderboard #lb-people .lb-rp-name, #leaderboard #lb-people .lb-rp-point {
+    display: inline-block;
+}
+
+#leaderboard #lb-people .lb-rp-ranking {
+
+}
+#leaderboard #lb-people .lb-rp-ranking::after {
+    padding: 0 0.35rem;
+    content: "-";
+}
+
+#leaderboard #lb-people .lb-rp-name {
+}
+
+#leaderboard #lb-people .lb-rp-point {
+}
+
+#leaderboard #lb-people .lb-rp-point::before {
+    padding: 0 0 0 0.35rem;
+    content: "(";
+}
+#leaderboard #lb-people .lb-rp-point::after {
+    padding: 0 0.35rem 0 0;
+    content: ")";
+}
+
+
+/* other things */
+h1 {
+    font-family: 'ZCOOL KuaiLe', cursive;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/* at most xxs */
+@media (max-width: 390px) {
+}
+
+/* between xxs and xs */
+@media (min-width: 390px) and (max-width: 576px) {
+}
+
+/* between xs and sm */
+@media (min-width: 576px) and (max-width: 768px) {
+}
+
+/* at most sm */
+@media (max-width: 768px) {
+    #game-wrapper, #leaderboard {
+        display: block;
+        width: 100%;
+    }
+
+    #game-wrapper #game {
+        width: 95%;
+    }
+}
+
+/* at least sm */
+@media (min-width: 768px) {
+    #game-wrapper, #leaderboard {
+        display: inline-block;
+    }
+}
+
+/* between sm and md */
+@media (min-width: 768px) and (max-width: 992px) {
+    #game-wrapper {
+        float: left;
+        width: 60%;
+    }
+
+    #leaderboard {
+        float: right;
+        width: 40%;
+    }
+
+    #game-wrapper #game {
+        width: 90%;
+    }
+}
+
+/* between md and lg */
+@media (min-width: 992px) and (max-width: 1200px) {
+    #game-wrapper {
+        float: left;
+        width: 70%;
+    }
+
+    #leaderboard {
+        float: right;
+        width: 30%;
+    }
+
+    #game-wrapper #game {
+        width: 80%;
+    }
+}
+
+/* lg-screen and larger */
+@media (min-width: 1200px) {
+    #game-wrapper {
+        float: left;
+        width: 80%;
+    }
+
+    #leaderboard {
+        float: right;
+        width: 20%;
+    }
+
+    #game-wrapper #game {
+        width: 75%;
+    }
+}
